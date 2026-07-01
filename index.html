@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps | Cloud & SRE Architect Portfolio</title>
-    <meta name="description" content="Interactive Cloud Engineering, DevOps, and SRE Portfolio featuring live Kubernetes terminal simulators and architecture visualizers.">
+    <title>DevOps & Systems Builder | Computer Engineering Student Portfolio</title>
+    <meta name="description" content="Interactive Cloud Engineering, DevOps, and Game Development Portfolio featuring live Kubernetes terminal simulators and architecture visualizers.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -20,13 +20,12 @@
         <div class="nav-brand">
             <span class="terminal-prompt">&gt;</span>
             <span class="brand-name">TSUKIHARA.YUKI</span>
-            <span class="badge-sre">SRE / DEVOPS</span>
+            <span class="badge-sre">DEVOPS / GAME DEV</span>
         </div>
         <nav class="nav-links">
             <a href="#about">About</a>
             <a href="#terminal-section">CLI Terminal</a>
-            <a href="#projects">Flagship Repos</a>
-            <a href="#architecture">Architecture</a>
+            <a href="#projects">DevOps Repos</a>
             <a href="#telemetry">Live Cluster</a>
             <a href="#contact" class="btn-primary">Connect</a>
         </nav>
@@ -38,25 +37,25 @@
             <div class="hero-content">
                 <div class="status-badge">
                     <span class="pulse-dot"></span>
-                    <span>ALL CLOUD SYSTEMS OPERATIONAL • 99.99% SLA</span>
+                    <span>BUILDING CLOUD INFRASTRUCTURE & TACTICAL FPS GAMES</span>
                 </div>
                 <h1 class="hero-title">
-                    Architecting <span class="gradient-text">Resilient</span> Cloud-Native Infrastructure.
+                    Building <span class="gradient-text">Cloud Systems</span> & Low-Level Engines.
                 </h1>
                 <p class="hero-subtitle">
-                    Senior DevOps & Site Reliability Engineer specializing in Kubernetes GitOps, AWS multi-region deployments, automated DevSecOps pipelines, and FinOps cost optimization.
+                    Computer Engineering student from Asunción, Paraguay 🇵🇾 specializing in Kubernetes GitOps, AWS cloud automation, CI/CD pipelines, and Unity game rendering shaders.
                 </p>
                 <div class="hero-actions">
                     <a href="#terminal-section" class="btn-primary">Launch Interactive CLI</a>
-                    <a href="#projects" class="btn-secondary">Explore Flagship Code</a>
+                    <a href="#projects" class="btn-secondary">Explore Cloud Repos</a>
                 </div>
                 <div class="tech-stack-row">
                     <span>Core Tech:</span>
                     <span class="tech-tag">AWS EKS</span>
                     <span class="tech-tag">Terraform</span>
                     <span class="tech-tag">Kubernetes</span>
-                    <span class="tech-tag">ArgoCD</span>
-                    <span class="tech-tag">Prometheus</span>
+                    <span class="tech-tag">Unity C#</span>
+                    <span class="tech-tag">PostgreSQL</span>
                     <span class="tech-tag">Docker</span>
                     <span class="tech-tag">GitHub Actions</span>
                 </div>
@@ -66,30 +65,31 @@
                     <span class="dot red"></span>
                     <span class="dot yellow"></span>
                     <span class="dot green"></span>
-                    <span class="card-title">cluster-status.yaml</span>
+                    <span class="card-title">developer-profile.yaml</span>
                 </div>
-                <pre class="code-preview"><code><span class="key">apiVersion</span>: <span class="val">sre.cloud/v1</span>
+                <pre class="code-preview"><code><span class="key">apiVersion</span>: <span class="val">dev.profile/v1</span>
 <span class="key">kind</span>: <span class="val">EngineerProfile</span>
 <span class="key">metadata</span>:
   <span class="key">name</span>: <span class="val">tsukihara-yuki</span>
-  <span class="key">role</span>: <span class="val">Senior Cloud Architect</span>
+  <span class="key">role</span>: <span class="val">Computer Engineering Student</span>
+  <span class="key">location</span>: <span class="val">Asunción, Paraguay 🇵🇾</span>
 <span class="key">spec</span>:
   <span class="key">certifications</span>:
-    - <span class="val">AWS Certified Solutions Architect</span>
-    - <span class="val">Certified Kubernetes Administrator (CKA)</span>
-  <span class="key">methodologies</span>:
-    <span class="key">gitops</span>: <span class="val">true</span>
-    <span class="key">zero_trust_security</span>: <span class="val">true</span>
-    <span class="key">infrastructure_as_code</span>: <span class="val">"100%"</span>
-  <span class="key">current_focus</span>: <span class="val">Multi-Cluster ArgoCD Delivery</span></code></pre>
+    - <span class="val">PostgreSQL Certified (2020)</span>
+    - <span class="val">ISC2 Cybersecurity Candidate</span>
+  <span class="key">interests</span>:
+    <span class="key">devops_iac</span>: <span class="val">true</span>
+    <span class="key">unity_shaders</span>: <span class="val">true</span>
+    <span class="key">database_tuning</span>: <span class="val">true</span>
+  <span class="key">current_focus</span>: <span class="val">ArgoCD GitOps & Tactical FPS</span></code></pre>
             </div>
         </section>
 
         <!-- Interactive DevOps CLI Terminal -->
         <section id="terminal-section" class="section">
             <div class="section-header">
-                <h2>Interactive DevOps Terminal Simulator</h2>
-                <p>Experience my cloud platform controls. Type commands directly into the terminal console below.</p>
+                <h2>Interactive Developer Terminal</h2>
+                <p>Experience my platform controls. Type commands directly into the terminal console below.</p>
             </div>
             <div class="terminal-window glass-panel">
                 <div class="terminal-bar">
@@ -98,16 +98,16 @@
                         <span class="dot yellow"></span>
                         <span class="dot green"></span>
                     </div>
-                    <div class="terminal-title">bash - sre-admin@aws-prod-eks-bastion: ~ (us-east-1)</div>
+                    <div class="terminal-title">bash - yuki@aws-eks-dev-box: ~ (us-east-1)</div>
                     <div class="terminal-status">CONNECTED</div>
                 </div>
                 <div id="terminal-output" class="terminal-body">
-                    <div class="log-line system-msg">Welcome to the Cloud Platform Terminal OS v2.4.0.</div>
-                    <div class="log-line system-msg">Type <span class="highlight-cmd">'help'</span> to see available engineering commands or try <span class="highlight-cmd">'kubectl get pods'</span>, <span class="highlight-cmd">'terraform plan'</span>, <span class="highlight-cmd">'skills'</span>, or <span class="highlight-cmd">'chaos'</span>.</div>
+                    <div class="log-line system-msg">Welcome to Yuki's Engineering Terminal OS v2.4.0.</div>
+                    <div class="log-line system-msg">Type <span class="highlight-cmd">'help'</span> to see available commands or try <span class="highlight-cmd">'kubectl get pods'</span>, <span class="highlight-cmd">'terraform plan'</span>, <span class="highlight-cmd">'skills'</span>, or <span class="highlight-cmd">'chaos'</span>.</div>
                     <br>
                 </div>
                 <div class="terminal-input-line">
-                    <span class="prompt">sre-admin@eks-bastion:~#</span>
+                    <span class="prompt">yuki@eks-dev-box:~#</span>
                     <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" placeholder="type 'help' and press Enter..." autofocus>
                 </div>
             </div>
@@ -116,10 +116,10 @@
         <!-- Flagship Portfolio Repositories Grid -->
         <section id="projects" class="section">
             <div class="section-header">
-                <h2>Flagship DevOps Repositories</h2>
-                <p>Production-grade architectures and automated CI/CD pipelines ready for enterprise deployment.</p>
+                <h2>Featured Cloud & DevOps Projects</h2>
+                <p>Hands-on architectures and automated CI/CD pipelines built to learn and demonstrate production concepts.</p>
                 <div class="filter-buttons">
-                    <button class="filter-btn active" data-filter="all">All Systems</button>
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
                     <button class="filter-btn" data-filter="iac">Terraform & IaC</button>
                     <button class="filter-btn" data-filter="gitops">Kubernetes & GitOps</button>
                     <button class="filter-btn" data-filter="devsecops">DevSecOps & CI/CD</button>
@@ -132,14 +132,14 @@
                     <h3>terraform-aws-enterprise-eks</h3>
                     <p>Highly available 3-AZ Amazon EKS cluster architecture deployed via modular Terraform/OpenTofu with IRSA least-privilege IAM and automated cost estimation.</p>
                     <div class="project-metrics">
-                        <span>💰 70% Spot Savings</span>
-                        <span>🔒 Checkov 0 CVEs</span>
+                        <span>💰 Spot Auto-Scaling</span>
+                        <span>🔒 Checkov Security Scans</span>
                     </div>
                     <div class="project-tags">
                         <span>Terraform</span><span>AWS EKS</span><span>VPC</span><span>Infracost</span>
                     </div>
                     <div class="project-links">
-                        <a href="../01-terraform-aws-enterprise-eks" class="btn-link">View Architecture &rarr;</a>
+                        <a href="https://github.com/Yukihara64/terraform-aws-enterprise-eks" target="_blank" class="btn-link">View Repository &rarr;</a>
                     </div>
                 </div>
 
@@ -147,16 +147,16 @@
                 <div class="project-card glass-panel" data-category="gitops">
                     <div class="project-badge badge-gitops">Kubernetes GitOps</div>
                     <h3>gitops-argocd-observability</h3>
-                    <p>Continuous delivery platform utilizing ArgoCD App-of-Apps pattern with automated self-healing sync and full Prometheus + Grafana SRE observability dashboard suite.</p>
+                    <p>Continuous delivery project utilizing ArgoCD App-of-Apps pattern with automated self-healing sync and a full Prometheus + Grafana monitoring dashboard suite.</p>
                     <div class="project-metrics">
                         <span>🤖 1-Click Bootstrap</span>
-                        <span>📈 RED Metrics Ready</span>
+                        <span>📈 Prometheus Metrics</span>
                     </div>
                     <div class="project-tags">
                         <span>ArgoCD</span><span>Kubernetes</span><span>Helm</span><span>Prometheus</span>
                     </div>
                     <div class="project-links">
-                        <a href="../02-gitops-argocd-observability" class="btn-link">Explore Manifests &rarr;</a>
+                        <a href="https://github.com/Yukihara64/gitops-argocd-observability" target="_blank" class="btn-link">Explore Manifests &rarr;</a>
                     </div>
                 </div>
 
@@ -164,16 +164,16 @@
                 <div class="project-card glass-panel" data-category="devsecops">
                     <div class="project-badge badge-sec">DevSecOps Pipeline</div>
                     <h3>devsecops-cicd-pipeline-showcase</h3>
-                    <p>End-to-end software supply chain security pipeline for a containerized Python service. Features automated linting, multi-arch builds, Trivy CVE scanning, and SBOM generation.</p>
+                    <p>End-to-end software supply chain security pipeline for a containerized Python service. Features automated linting, multi-arch Docker builds, Trivy CVE scans, and SBOM generation.</p>
                     <div class="project-metrics">
-                        <span>🛡️ Trivy Shift-Left</span>
+                        <span>🛡️ Trivy Scanner</span>
                         <span>📦 Syft SPDX SBOM</span>
                     </div>
                     <div class="project-tags">
                         <span>Docker</span><span>Trivy</span><span>FastAPI</span><span>GitHub Actions</span>
                     </div>
                     <div class="project-links">
-                        <a href="../03-devsecops-cicd-pipeline-showcase" class="btn-link">Inspect Pipeline &rarr;</a>
+                        <a href="https://github.com/Yukihara64/devsecops-cicd-pipeline-showcase" target="_blank" class="btn-link">Inspect Pipeline &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -182,14 +182,14 @@
         <!-- Live SRE Telemetry & Cluster Health -->
         <section id="telemetry" class="section">
             <div class="section-header">
-                <h2>Live Cluster Telemetry & Observability</h2>
-                <p>Simulated real-time Prometheus metrics scraped from our production Kubernetes node groups.</p>
+                <h2>Simulated Cluster Telemetry</h2>
+                <p>Real-time simulated Prometheus metrics demonstrating Kubernetes node monitoring concepts.</p>
             </div>
             <div class="telemetry-grid">
                 <div class="telemetry-card glass-panel">
-                    <div class="telemetry-label">CONTROL PLANE SLA</div>
-                    <div class="telemetry-value text-emerald">99.998%</div>
-                    <div class="telemetry-sub">0 unplanned incidents in 90 days</div>
+                    <div class="telemetry-label">CLUSTER SLA TARGET</div>
+                    <div class="telemetry-value text-emerald">99.99%</div>
+                    <div class="telemetry-sub">Simulated EKS Control Plane</div>
                 </div>
                 <div class="telemetry-card glass-panel">
                     <div class="telemetry-label">AVERAGE CPU LOAD (EKS)</div>
@@ -204,25 +204,25 @@
                 <div class="telemetry-card glass-panel">
                     <div class="telemetry-label">INGRESS REQUEST RATE</div>
                     <div id="metric-req" class="telemetry-value text-orange">1,420 req/sec</div>
-                    <div class="telemetry-sub">Avg latency: 14.2ms (ALB TLS)</div>
+                    <div class="telemetry-sub">Simulated ALB HTTP/2 traffic</div>
                 </div>
             </div>
         </section>
 
         <!-- Contact / Footer Section -->
         <section id="contact" class="section contact-section glass-panel">
-            <h2>Ready to Scale Your Cloud Infrastructure?</h2>
-            <p>Let's connect to discuss DevOps leadership, Site Reliability Engineering, and cloud automation.</p>
+            <h2>Let's Connect & Build Together!</h2>
+            <p>Whether you want to talk about cloud automation, database tuning, or Unity shaders, I'd love to connect.</p>
             <div class="contact-methods">
-                <a href="https://github.com" target="_blank" class="btn-primary">GitHub Profile</a>
+                <a href="https://github.com/Yukihara64" target="_blank" class="btn-primary">GitHub Profile</a>
                 <a href="https://linkedin.com" target="_blank" class="btn-secondary">LinkedIn Profile</a>
-                <a href="mailto:devops@example.com" class="btn-outline">Email Me</a>
+                <a href="mailto:ebrizuela1945@hotmail.com" class="btn-outline">Email Me</a>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 Tsukihara Yuki • Engineered with high-performance Web standards & Cloud-Native precision.</p>
+        <p>&copy; 2026 Tsukihara Yuki • Engineered with passion in Asunción, Paraguay 🇵🇾.</p>
     </footer>
 
     <script src="script.js"></script>

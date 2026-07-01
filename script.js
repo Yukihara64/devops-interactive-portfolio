@@ -5,30 +5,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const commands = {
         help: () => `
-<span class="output-success">Available Engineering & SRE Commands:</span>
-  <span class="highlight-cmd">skills</span>            - Display core cloud engineering technologies & tools
-  <span class="highlight-cmd">kubectl get pods</span>  - Check live health of Kubernetes microservice pods
+<span class="output-success">Available Developer Commands:</span>
+  <span class="highlight-cmd">skills</span>            - Display tech stack (Cloud, DevOps, Databases & Game Dev)
+  <span class="highlight-cmd">kubectl get pods</span>  - Check live health of Kubernetes cluster pods
   <span class="highlight-cmd">terraform plan</span>    - Preview AWS EKS cloud infrastructure execution diff
-  <span class="highlight-cmd">architecture</span>      - Print ASCII cloud architecture overview
-  <span class="highlight-cmd">chaos</span>             - Run chaos engineering fault injection simulation
+  <span class="highlight-cmd">gamedev</span>           - Print info about my Unity Tactical FPS project
+  <span class="highlight-cmd">chaos</span>             - Run chaos engineering self-healing simulation
   <span class="highlight-cmd">clear</span>             - Clear terminal console logs`,
 
         skills: () => `
-<span class="output-success">Cloud & DevOps Competence Matrix:</span>
-  <span class="highlight-cmd">[Cloud Providers]</span> : AWS (EKS, VPC, RDS, IAM IRSA, KMS, Route53, WAF)
-  <span class="highlight-cmd">[IaC & Config]</span>    : Terraform, OpenTofu, Ansible, Packer, Kustomize
-  <span class="highlight-cmd">[Container OS]</span>    : Kubernetes, Docker, Helm, ArgoCD GitOps, Calico
-  <span class="highlight-cmd">[Observability]</span>   : Prometheus, Grafana, Alertmanager, OpenTelemetry
-  <span class="highlight-cmd">[DevSecOps CI/CD]</span> : GitHub Actions, Trivy, Checkov, Syft SBOM, SonarQube`,
+<span class="output-success">Technical Skills & Tools Matrix:</span>
+  <span class="highlight-cmd">[Cloud & DevOps]</span>   : AWS (EKS, VPC, RDS, IAM), Docker, Kubernetes, Terraform, ArgoCD, Helm
+  <span class="highlight-cmd">[CI/CD & Security]</span> : GitHub Actions, Trivy, Checkov, Syft SBOM, Linux, ISC2 Candidate
+  <span class="highlight-cmd">[Languages & DBs]</span>  : C#, Python, Bash, SQL, PostgreSQL (Certified), MySQL, SQL Server
+  <span class="highlight-cmd">[Game Dev & 3D]</span>    : Unity C#, Blender, Unreal Engine, Forward Rendering, Custom Shaders`,
 
         'kubectl get pods': () => `
 <span class="output-success">NAME                                      READY   STATUS    RESTARTS   AGE</span>
 prod-cloud-service-58f8b9b7d8-2x9z4       1/1     Running   0          14d
 prod-cloud-service-58f8b9b7d8-7k3w1       1/1     Running   0          14d
-prod-cloud-service-58f8b9b7d8-m9p8q       1/1     Running   0          14d
 argocd-server-7964b7f498-8x2v9            1/1     Running   0          30d
 prometheus-kube-prometheus-0              2/2     Running   0          30d
-<span class="system-msg">All pods operating under 100% SLA conditions across 3 AWS Availability Zones.</span>`,
+<span class="system-msg">All cluster pods operating cleanly across 3 AWS Availability Zones.</span>`,
 
         'terraform plan': () => `
 <span class="output-warn">Terraform will perform the following actions:</span>
@@ -36,16 +34,14 @@ prometheus-kube-prometheus-0              2/2     Running   0          30d
   <span class="output-success">~ desired_size = 3 -> 5 (Auto-scaled via Horizontal Pod Autoscaler demand)</span>
   
 <span class="output-success">Plan: 0 to add, 1 to change, 0 to destroy.</span>
-<span class="system-msg">Infracost automated PR report: Monthly cloud expenditure savings maintained at 68.4% via Spot instances.</span>`,
+<span class="system-msg">Infracost evaluation: Utilizing Spot instances keeps monthly cloud costs low.</span>`,
 
-        architecture: () => `
-<span class="output-success">AWS Cloud Native Architecture Flow:</span>
-  [Client Traffic] -> [AWS Route53 / WAF] -> [Application Load Balancer (ALB)]
-       |
-       +---> [Amazon EKS Cluster v1.29 (Private Subnets across 3 AZs)]
-                  |---> On-Demand Node Group (Core System / Stateful Apps)
-                  |---> Spot Instance Node Group (Stateless Microservices - 70% Cost Reduction)
-                  |---> Least-Privilege IAM IRSA (OIDC Identity Provider)`,
+        gamedev: () => `
+<span class="output-success">🎮 Tactical Hardcore FPS Game Project:</span>
+  <span class="highlight-cmd">[Engine]</span>    : Unity (C#)
+  <span class="highlight-cmd">[Setting]</span>   : Asunción, Paraguay 🇵🇾
+  <span class="highlight-cmd">[Rendering]</span> : Forward Rendering pipeline with custom shader graphs
+  <span class="highlight-cmd">[AI / NPC]</span>  : Tactical NPC behavior and cover-seeking combat systems`,
 
         chaos: () => {
             setTimeout(() => {
@@ -55,7 +51,7 @@ prometheus-kube-prometheus-0              2/2     Running   0          30d
             setTimeout(() => {
                 appendLog(`<span class="output-success">✅ [RECOVERY SUCCESS] New replacement pod prod-cloud-service-58f8b9b7d8-9l4m2 provisioned and Ready in 1.4s!</span>`);
             }, 2200);
-            return `<span class="output-warn">⚡ Triggering Chaos Engineering Litmus fault experiment against live EKS namespace...</span>`;
+            return `<span class="output-warn">⚡ Triggering Chaos Engineering fault experiment against live EKS namespace...</span>`;
         },
 
         clear: () => {
@@ -80,20 +76,19 @@ prometheus-kube-prometheus-0              2/2     Running   0          30d
 
                 if (!rawCmd) return;
 
-                appendLog(`<span class="prompt">sre-admin@eks-bastion:~#</span> <span class="cmd-input-echo">${rawCmd}</span>`);
+                appendLog(`<span class="prompt">yuki@eks-dev-box:~#</span> <span class="cmd-input-echo">${rawCmd}</span>`);
 
                 if (commands[rawCmd]) {
                     const result = commands[rawCmd]();
                     if (result) appendLog(result);
                 } else if (rawCmd === 'cat resume.pdf' || rawCmd === 'resume') {
-                    appendLog(`<span class="output-warn">📄 To view complete CV/Resume, connect with Tsukihara Yuki via LinkedIn or GitHub!</span>`);
+                    appendLog(`<span class="output-warn">📄 To view complete CV/Resume, connect with Yuki via LinkedIn or Email!</span>`);
                 } else {
-                    appendLog(`<span class="output-err">bash: ${rawCmd}: command not found. Type 'help' for available SRE commands.</span>`);
+                    appendLog(`<span class="output-err">bash: ${rawCmd}: command not found. Type 'help' for available developer commands.</span>`);
                 }
             }
         });
 
-        // Focus terminal input when clicking inside the window
         document.querySelector('.terminal-window').addEventListener('click', () => {
             termInput.focus();
         });
