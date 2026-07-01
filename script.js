@@ -6,12 +6,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const commands = {
         help: () => `
 <span class="output-success">Available Developer Commands:</span>
+  <span class="highlight-cmd">experience</span>        - Print professional work history (Tarkov, INFOBIP, BCP)
   <span class="highlight-cmd">skills</span>            - Display tech stack (Cloud, DevOps, Databases & Game Dev)
   <span class="highlight-cmd">kubectl get pods</span>  - Check live health of Kubernetes cluster pods
   <span class="highlight-cmd">terraform plan</span>    - Preview AWS EKS cloud infrastructure execution diff
   <span class="highlight-cmd">gamedev</span>           - Print info about my Unity Tactical FPS project
   <span class="highlight-cmd">chaos</span>             - Run chaos engineering self-healing simulation
   <span class="highlight-cmd">clear</span>             - Clear terminal console logs`,
+
+        experience: () => `
+<span class="output-success">Professional Work Experience & Track Record:</span>
+  <span class="highlight-cmd">[2026 - Present] Localization Specialist @ Battlestate Games (Escape from Tarkov)</span>
+    • Driving localization across English, Spanish, and Japanese with developer-first DevOps CI/CD pipelines.
+  <span class="highlight-cmd">[2024 - 2026]    Customer Support Technician @ INFOBIP</span>
+    • Managed CPaaS/OTT platforms (SMS, RCS, SMTP) and conducted advanced REST API troubleshooting.
+  <span class="highlight-cmd">[2023 - 2024]    Database Administrator @ ONE S.A. / Banco Central del Paraguay</span>
+    • Developed and optimized PostgreSQL, SQL Server, and MySQL databases; executed secure production deployments.
+  <span class="highlight-cmd">[2018 - 2023]    Administrative Assistant @ B.D.G.K S.A</span>
+    • Managed technical administrative procedures including patent processing and land use applications.`,
+        exp: () => commands.experience(),
+        work: () => commands.experience(),
 
         skills: () => `
 <span class="output-success">Technical Skills & Tools Matrix:</span>
