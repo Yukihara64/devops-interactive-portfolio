@@ -82,7 +82,7 @@ prometheus-kube-prometheus-0              2/2     Running   0          30d
                     const result = commands[rawCmd]();
                     if (result) appendLog(result);
                 } else if (rawCmd === 'cat resume.pdf' || rawCmd === 'resume') {
-                    appendLog(`<span class="output-warn">📄 To view complete CV/Resume, connect with Yuki via LinkedIn or Email!</span>`);
+                    appendLog(`<span class="output-warn">📄 To view complete CV/Resume, connect with Daniel via <a href="https://www.linkedin.com/in/danielguanes/" target="_blank" style="color: #61dafb; text-decoration: underline;">LinkedIn</a> or Email!</span>`);
                 } else {
                     appendLog(`<span class="output-err">bash: ${rawCmd}: command not found. Type 'help' for available developer commands.</span>`);
                 }
